@@ -44,6 +44,28 @@ public class ArrayPriorityQueue implements PriorityQueue{
     }
 
     public static void main( String[] args ) {
+        ArrayPriorityQueue bayle = new ArrayPriorityQueue();
+	bayle.add(3);
+	bayle.add(4);
+	bayle.add(7);
+	bayle.add(1);
+	System.out.println("look at me!\n" + bayle);
+	bayle.add(100);
+	bayle.add(-34);
+	bayle.add(3);
+	System.out.println("look at me now!\n" + bayle);
+	bayle.removeMin();
+	bayle.removeMin();
+	bayle.removeMin();
+	System.out.println("I'm meltingggggggggg\n" + bayle);
+	bayle.removeMin();
+	bayle.removeMin();
+	System.out.println("I'm meltingggggggggg:(\n" + bayle);
+	bayle.removeMin();
+	bayle.removeMin();
+	bayle.removeMin();
+	bayle.removeMin();
+	System.out.println("I'm meltingggggggggg\n" + bayle);	    
 
     }
 }
