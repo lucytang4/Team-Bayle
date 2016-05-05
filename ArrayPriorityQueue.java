@@ -15,9 +15,10 @@ public class ArrayPriorityQueue implements PriorityQueue{
 	}
 
 	for( int i = 0; i < _data.size(); i++ ) {
-	    if( _data.get(i).compareTo(x) > 0 ) 
+	    if( _data.get(i).compareTo(x) > 0 ) {
 		_data.add( i,x );
-	}
+		break;
+	    }
     }
 
     public boolean isEmpty() {
