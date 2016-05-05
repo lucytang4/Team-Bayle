@@ -9,16 +9,16 @@ public class ArrayPriorityQueue implements PriorityQueue{
     }
 
     public void add( Comparable x ) {
-	if( isEmpty() ) {
+	if( isEmpty() || _data.get(_data.size()-1).compareTo(x) < 0) {
 	    _data.add(x);
 	    return;
 	}
-
 	for( int i = 0; i < _data.size(); i++ ) {
-	    if( _data.get(i).compareTo(x) > 0 ) {
+	    if( _data.get(i).compareTo(x) > 0 ){
 		_data.add( i,x );
 		break;
 	    }
+	}
     }
 
     public boolean isEmpty() {
