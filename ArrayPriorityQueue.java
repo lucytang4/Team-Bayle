@@ -13,10 +13,12 @@ public class ArrayPriorityQueue implements PriorityQueue{
 	    _data.add(x);
 	    return;
 	}
-	for( int i = 0; i < _data.size(); i++ ) {
-	    if( _data.get(i).compareTo(x) > 0 ){
-		_data.add( i,x );
-		break;
+	else {
+	    for( int i = 0; i < _data.size(); i++ ) {
+		if( _data.get(i).compareTo(x) > 0 ){
+		    _data.add( i,x );
+		    break;
+		}
 	    }
 	}
     }
@@ -26,10 +28,16 @@ public class ArrayPriorityQueue implements PriorityQueue{
     }
 
     public Comparable peekMin() {
+	if (isEmpty()){
+	    return null;
+	}
 	return _data.get(0);
     }
 
     public Comparable removeMin() {
+	if (isEmpty()){
+	    return null;
+	}
 	Comparable tmp = _data.get(0);
 	_data.remove(0);
 	return tmp;
